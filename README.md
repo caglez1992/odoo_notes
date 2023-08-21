@@ -1,4 +1,9 @@
 # ODOO GENERAL
+#### OPTIONS
+```xm;
+options="{'no_open': True, 'no_create_edit': True, 'no_create': True, 'no_quick_create':True}"
+```
+
 #### SQL CONSTRAINTS
 ```python
 _sql_constraints = [
