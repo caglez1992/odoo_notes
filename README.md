@@ -12,9 +12,25 @@ _sql_constraints = [
 ```
 
 
-# ODOO 15
+# RETURN FORM VIEW (MODAL)
 
-#### RETURN FORM VIEW
+#### ODOO 9
+```python
+form_view_id = self.env.ref('oe_oferta.oe_cargo_docente_acta_form')
+return {
+    'name': 'Agregar Docente',
+    'type': 'ir.actions.act_window',
+    'view_type': 'form',
+    'view_mode': 'form',
+    'views': [(form_view_id.id, 'form')],
+    'view_id': form_view_id.id,
+    'res_model': 'oe.cargo.docente',
+    'target': 'new',
+    'context': context
+}
+```
+
+#### ODOO 15
 ```python
 view_id = self.env.ref('electronic_invoice.factura_electronica_form')
 return {
